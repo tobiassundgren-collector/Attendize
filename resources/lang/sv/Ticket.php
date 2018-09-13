@@ -5,9 +5,9 @@ return array (
   // Defined in file C:\\wamp\\www\\attendize\\resources\\views\\ManageEvent\\Tickets.blade.php
   'on_sale' => 'On Sale',
   //==================================== Translations ====================================//
-  'attendee_ref' => 'Attendee Ref.',
-  'coupon_codes' => 'Coupon Codes',
-  'create_ticket' => 'Create Ticket',
+  'attendee_ref' => 'Referens.',
+  'coupon_codes' => 'Rabattkod',
+  'create_ticket' => 'Skapa Biljett',
   'demo_attendee_ref' => '#YLY9U73-1',
   'demo_end_date_time' => 'Mar 18th 5:08PM',
   'demo_event' => 'Demo Event',

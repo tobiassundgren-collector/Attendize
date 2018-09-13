@@ -4732,6 +4732,12 @@ function log() {
         $('.ticket_holder_email').val($('#order_email').val());
     });
 
+    $('#order_email').on('change', function(e) {
+        $('.ticket_holder_first_name').val($('#order_first_name').val());
+        $('.ticket_holder_last_name').val($('#order_last_name').val());
+        $('.ticket_holder_email').val($('#order_email').val());
+    });
+
     $('.card-number').payment('formatCardNumber');
     $('.card-cvc').payment('formatCardCVC');
 
