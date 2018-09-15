@@ -19,6 +19,11 @@
                     <div class="content">
                         <div class="tickets_table_wrap">
                             <table class="table">
+                            <tr>
+                                        <td colspan="3" style="text-align: center">
+                                            @lang("Public_ViewEvent.below_tickets")
+                                        </td>
+                                    </tr>
                                 <?php
                                 $is_free_event = true;
                                 ?>
@@ -91,15 +96,12 @@
                                     </tr>
                                 @endforeach
 
-                                    <tr>
-                                        <td colspan="3" style="text-align: center">
-                                            @lang("Public_ViewEvent.below_tickets")
-                                        </td>
-                                    </tr>
+                                    
                                 <tr class="checkout">
                                     <td colspan="3">
                                         @if(!$is_free_event)
                                             <div class="hidden-xs pull-left">
+                                                @lang("Public_ViewEvent._payment_methods_available")
                                                 <img class=""
                                                      src="{{asset('assets/images/public/EventPage/credit-card-logos.png')}}"/>
                                                 @if($event->enable_offline_payments)
