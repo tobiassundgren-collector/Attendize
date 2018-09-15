@@ -17,7 +17,7 @@ return array (
   'attendee_cancelled' => 'Avbruten',
   'below_order_details_header' => '',
   'below_payment_information_header' => '',
-  'below_tickets' => 'Välj önskat antal biljetter och klicka på "Nästa". I nästa steg väljer du vill betala.',
+  'below_tickets' => 'Välj önskat antal biljetter och klicka på "Nästa". I nästa steg väljer du hur du vill betala.',
   'booking_fee' => 'Service Kostnad',
   'booking_fees' => 'Service Kostnader',
   'card_number' => 'Kortnummer',

@@ -24,7 +24,7 @@
             <h1 property="name">{{$event->title}}</h1>
             <div class="event_venue">
                 <span property="startDate" content="{{ $event->start_date->toIso8601String() }}">
-                    {{ $event->start_date->format('d M H:i') }}
+                    {{ $event->start_date->format('d M Y H:i') }}
                 </span>
                
                 @lang("Public_ViewEvent.at")
