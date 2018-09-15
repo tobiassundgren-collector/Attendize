@@ -88,14 +88,14 @@
                     </div>
                 </div>
 
-                <div class="p20 pl0">
+                <!-- <div class="p20 pl0">
                     <a href="javascript:void(0);" class="btn btn-primary btn-xs" id="mirror_buyer_info">
                         @lang("Public_ViewEvent.copy_buyer")
                     </a>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <!-- <div class="ticket_holders_details" >
+                         <div class="ticket_holders_details" >
                             <h3>@lang("Public_ViewEvent.ticket_holder_information")</h3>
                             <?php
                                 $total_attendee_increment = 0;
@@ -141,9 +141,9 @@
                                 </div>
                                 @endfor
                             @endforeach
-                        </div> -->
+                        </div> 
                     </div>
-                </div>
+                </div> -->
 
                 <style>
                     .offline_payment_toggle {
