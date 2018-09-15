@@ -99,7 +99,7 @@
                             <h3>@lang("Public_ViewEvent.ticket_holder_information")</h3>
                             <?php
                                 $total_attendee_increment = 0;
-                            ?>
+                            ?> -->
                             @foreach($tickets as $ticket)
                                 @for($i=0; $i<=$ticket['qty']-1; $i++)
                                 <div class="panel panel-primary">
@@ -141,6 +141,7 @@
                                 </div>
                                 @endfor
                             @endforeach
+<!--
                         </div> 
                     </div>
                 </div> -->
