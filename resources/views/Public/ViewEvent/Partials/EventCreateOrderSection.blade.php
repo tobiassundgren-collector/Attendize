@@ -93,10 +93,9 @@
                         @lang("Public_ViewEvent.copy_buyer")
                     </a>
                 </div>
-
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="ticket_holders_details" >
+                        <!-- <div class="ticket_holders_details" >
                             <h3>@lang("Public_ViewEvent.ticket_holder_information")</h3>
                             <?php
                                 $total_attendee_increment = 0;
@@ -142,7 +141,7 @@
                                 </div>
                                 @endfor
                             @endforeach
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
