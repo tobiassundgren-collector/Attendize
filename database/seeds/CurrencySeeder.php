@@ -259,8 +259,8 @@ class CurrencySeeder extends Seeder
             [
                 'id' => 18,
                 'title' => 'Swedish Krona',
-                'symbol_left' => 'kr ',
-                'symbol_right' => '',
+                'symbol_left' => '',
+                'symbol_right' => ' kr',
                 'code' => 'SEK',
                 'decimal_place' => 2,
                 'value' => 6.45870018,

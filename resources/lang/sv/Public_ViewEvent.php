@@ -8,7 +8,7 @@ return array (
   'Contact' => 'Kontakt',
   'DETAILS' => 'INFORMATION',
   'Facebook' => 'Facebook',
-  'LOCATION' => 'PLATS',
+  'LOCATION' => 'KARTA',
   'TICKETS' => 'BILJETTER',
   'Twitter' => 'Twitter',
   'Whatsapp' => 'Whatsapp',
