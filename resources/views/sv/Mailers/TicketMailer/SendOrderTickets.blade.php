@@ -123,5 +123,5 @@ Email: <b>{{$order->email}}</b><br>
 </div>
 <br><br>
 Med vänlig hälsning
-$order->event->organiser
+{{$order->event->organiser->name}}
 @stop
