@@ -56,7 +56,6 @@ class OrderMailer
                 $message->subject(trans("Controllers.tickets_for_event", ["event" => $order->event->title]));
             });
         }
-
     }
 
 }
