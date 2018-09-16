@@ -65,6 +65,7 @@ class OrderCompletedListener implements ShouldQueue
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($curl, CURLOPT_POST, true);
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $jsonDataEncoded);
 
             $curl_response = curl_exec($curl);
             if ($curl_response === false) {
