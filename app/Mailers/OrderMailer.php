@@ -51,7 +51,7 @@ class OrderMailer
                 $message->attach($file_path);
             });
         }else{
-            Mail::send('Mailers.TicketMailer.SendOrderTickets', $data, function ($message) use ($order, $file_path) {
+            Mail::send('Mailers.TicketMailer.SendOrderTickets', $data, function ($message) use ($order) {
                 $message->to($order->email);
                 $message->subject(trans("Controllers.tickets_for_event", ["event" => $order->event->title]));
             });
