@@ -74,7 +74,8 @@ class OrderCompletedListener implements ShouldQueue
                 die('error occured during curl exec. Additioanl info: ' . var_export($info));
             }
             curl_close($curl);
-            $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/swish//' . $file_name;
+            $file_name = "testswish.png";
+            $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/swish/' . $file_name;
             file_put_contents(file_path, curl_response);
             $decoded = json_decode($curl_response);
             if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
