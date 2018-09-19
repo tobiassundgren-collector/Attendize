@@ -97,7 +97,7 @@
 	                            @endphp
 	                            {{money($grand_total, $order->event->currency)}} 
                                 @if($attendee->ticket->total_booking_fee>0) 
-                                 (inkl. {{money($attendee->ticket->total_booking_fee, $order->event->currency}} avgift 
+                                 (inkl. {{money($attendee->ticket->total_booking_fee, $order->event->currency)}} avgift)
                                 @endif
                                 @if($event->organiser->charge_tax)
                                  (inkl. {{money($tax_amt, $order->event->currency)}} {{$event->organiser->tax_name}})
