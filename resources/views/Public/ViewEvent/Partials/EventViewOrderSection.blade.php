@@ -57,8 +57,6 @@
             <h2>
                 @if($order->is_payment_received)
                 {!! @trans("Public_ViewEvent.download_links", ["title" => trans("Public_ViewEvent.download_tickets"), "url"=>route('showOrderTickets', ['order_reference' => $order->order_reference])."?download=1"]) !!}
-                @elseif
-                @lang("Public_ViewEvent.download_links_not_paid")
                 @endif
             </h2>
         </div>
