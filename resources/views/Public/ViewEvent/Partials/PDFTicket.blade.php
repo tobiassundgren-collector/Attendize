@@ -95,8 +95,13 @@
 					                $tax_amt = ($grand_total * $event->organiser->tax_value) / 100;
 					                $grand_total = $tax_amt + $grand_total;
 	                            @endphp
-	                            {{money($grand_total, $order->event->currency)}} (inkl. {{money($attendee->ticket->total_booking_fee, $order->event->currency) avgift} } (inkl. {{money($tax_amt, $order->event->currency)}} {{$event->organiser->tax_name}})
-	                            <br><br>{{$event->organiser->tax_name}} ID: {{ $event->organiser->tax_id }}
+	                            {{money($grand_total, $order->event->currency)}} 
+                                @if($attendee->ticket->total_booking_fee>0) 
+                                 (inkl. {{money($attendee->ticket->total_booking_fee, $order->event->currency}} avgift 
+                                @endif
+                                @if($event->organiser->charge_tax)
+                                 (inkl. {{money($tax_amt, $order->event->currency)}} {{$event->organiser->tax_name}})
+                                @endif
                             </div>
 			</div>
                         <div class="barcode">
