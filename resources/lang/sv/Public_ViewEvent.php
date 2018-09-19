@@ -57,7 +57,7 @@ return array (
   'presents' => 'presenterar',
   'price' => 'Pris',
   'quantity_full' => 'Antal',
-  'reference' => 'Referens',
+  'reference' => 'Bokningsnummer',
   'refunded_amount' => 'Återbetalat belopp',
   'register' => 'Nästa',
   'sales_have_ended' => 'Försäljningen Har Avslutats',

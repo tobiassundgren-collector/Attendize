@@ -5,7 +5,7 @@ return array (
   // Defined in file C:\\wamp\\www\\attendize\\resources\\views\\ManageEvent\\Tickets.blade.php
   'on_sale' => 'On Sale',
   //==================================== Translations ====================================//
-  'attendee_ref' => 'Referens.',
+  'attendee_ref' => 'Löpnr.',
   'coupon_codes' => 'Rabattkod',
   'create_ticket' => 'Skapa Biljett',
   'demo_attendee_ref' => '#YLY9U73-1',
@@ -27,7 +27,7 @@ return array (
   'name' => 'Name',
   'no_tickets_yet' => 'No Tickets Yet',
   'no_tickets_yet_text' => 'Create your first ticket by clicking the button below.',
-  'order_ref' => 'Order Ref.',
+  'order_ref' => 'Bokningsnummer',
   'organiser' => 'Arrangör',
   'pause' => 'Pause',
   'price' => 'Pris',
