@@ -2,24 +2,25 @@
 
 @section('message_content')
 Hej kära biljettköpare,
-
+<br/>
 @if($order->is_payment_received)
 tack för att du köpt biljetter till <b>{{$order->event->title}}</b>,<br><br>
-Dina biljetter är bifogade med detta email. Du kan också se detaljer för din beställning och ladda ner biljetterna på: {{route('showOrderDetails', ['order_reference' => $order->order_reference])}}
+Dina biljetter är bifogade i detta email.<br/>
+Du kan också se detaljer för din beställning och ladda ner biljetterna på: {{route('showOrderDetails', ['order_reference' => $order->order_reference])}}
 @else
 tack för att du reserverat biljetter till <b>{{$order->event->title}}</b>,<br><br>
 <br><br>
-<b>För att slutföra beställningen, så är det bara att slutföra betalningen. 
+<b>För att slutföra beställningen, så är det bara att betala via Swish. 
 Instruktioner för hur du betalar finns på: {{route('showOrderDetails', ['order_reference' => $order->order_reference])}}</b>
 <br><br>
 @endif
-<h3>Order Details</h3>
+<h3>Detaljer för ordern</h3>
 Bokningsnummer: <b>{{$order->order_reference}}</b><br>
 Namn: <b>{{$order->full_name}}</b><br>
 Bokningsdatum: <b>{{$order->created_at->toDayDateTimeString()}}</b><br>
 Email: <b>{{$order->email}}</b><br>
 <a href="{!! route('downloadCalendarIcs', ['event_id' => $order->event->id]) !!}">Lägg till i kalender</a>
-<h3>Följande är köpt/reserverat</h3>
+<h3>Följande är @if($order->is_payment_received) köpt @else reserverat @endif</h3>
 <div style="padding:10px; background: #F9F9F9; border: 1px solid #f1f1f1;">
     <table style="width:100%; margin:10px;">
         <tr>
@@ -27,7 +28,7 @@ Email: <b>{{$order->email}}</b><br>
                 <b>Biljett</b>
             </td>
             <td>
-                <b>Antal.</b>
+                <b>Antal</b>
             </td>
             <td>
                 <b>Pris</b>
@@ -81,7 +82,7 @@ Email: <b>{{$order->email}}</b><br>
             <td>
             </td>
             <td>
-                <b>Totalt</b>
+                <b>Delsumma</b>
             </td>
             <td colspan="2">
                 {{$orderService->getOrderTotalWithBookingFee(true)}}
