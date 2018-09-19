@@ -27,6 +27,7 @@ return array (
   'cvc_number' => 'CVV/CVC',
   'date' => 'Datum',
   'download_links' => 'Dina <a title=":title" class="ticket_download_link" href=":url">biljetter</a> och en bekräftelse har skickats till dig via epost.',
+  'download_links_not_paid' => 'En bekräftelse på din reservation har skickats till dig via epost.',
   'download_tickets' => 'Ladda ner biljetter',
   'email' => 'Epost',
   'email_address' => 'Epost-adress',
