@@ -8,6 +8,7 @@
         @show
     </title>
 </head>
+{{ $email_logo = 'assets/images/molnlycke-storband-logo-1.png' }}
 
 <body style="background-color: #f7f7f7;margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;font-size: 100%;line-height: 1.6;-webkit-font-smoothing: antialiased;-webkit-text-size-adjust: none;width: 100% !important;height: 100%">
 
