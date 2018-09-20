@@ -8,7 +8,7 @@
             <button type="button" class="btn  btn-link" data-toggle="modal" data-target="#contactModalCenter">
             Kontakta oss
                 </button>
-                <br/>
+                 | 
 
                 {{--Attendize is provided free of charge on the condition the below hyperlink is left in place.--}}
                 {{--See https://www.attendize.com/licence.php for more information.--}}
