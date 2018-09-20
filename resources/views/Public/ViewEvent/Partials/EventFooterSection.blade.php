@@ -2,12 +2,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#termsModalCenter">
+            <button type="button" class="btn  btn-link" data-toggle="modal" data-target="#termsModalCenter">
             Allmänna villkor
             </button>
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#contactModalCenter">
+            <button type="button" class="btn  btn-link" data-toggle="modal" data-target="#contactModalCenter">
             Kontakta oss
                 </button>
+                <br/>
 
                 {{--Attendize is provided free of charge on the condition the below hyperlink is left in place.--}}
                 {{--See https://www.attendize.com/licence.php for more information.--}}
