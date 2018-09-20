@@ -38,7 +38,8 @@
       <div class="modal-body">
 
         <strong>Kontakta Mölnlycke Storband</strong><br>
-        Önskar du att komma i kontakt med oss, skicka ett mail till kontakt@molnlyckestorband.com med ditt ärende och dina kontaktuppgifter så hör vi av oss inom kort.
+        Önskar du att komma i kontakt med oss?<br/>
+        Skicka ett mail till <a href="mailto:kontakt@molnlyckestorband.com">kontakt@molnlyckestorband.com</a> med ditt ärende och dina kontaktuppgifter så hör vi av oss inom kort.<br/><br/>
         Du kan också ringa Tobias Sundgren på 0760959055. 
         <br/> <br/>
       </div>
