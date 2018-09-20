@@ -25,9 +25,37 @@
     </div>
 </footer>
 {{--Admin Links--}}
+
+   <div class="modal fade" id="contactModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Kontakta oss</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <ol>
+    <li>
+        <strong>Om Mölnlycke Storband</strong>
+    </li>
+</ol>
+<ul>
+    <li>Företaget har sitt säte i Mölnlycke. Företagets postadress är Högadalsvägen 2.</li>
+    <li>Orgnr: 852000-7959</li>
+    <li>Önskar du att komma i kontakt med oss, skicka ett mail till kontakt@molnlyckestorband.com med ditt ärende och dina kontaktuppgifter så hör vi av oss inom kort.</li>
+</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" id="termsModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Allmänna villkor</h5>
