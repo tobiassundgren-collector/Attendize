@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#termsModalCenter">
             Allmänna villkor
             </button>
-            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#contactModalCenter">
             Kontakta oss
                 </button>
 
