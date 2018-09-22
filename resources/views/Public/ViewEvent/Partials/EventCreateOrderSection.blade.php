@@ -183,10 +183,6 @@
   </div>
   <div id="swish" class="tab-pane fade">
   @if($event->enable_offline_payments)
-  <div class="offline_payment_toggle">
-                        
-                            <input id="pay_offline_off" name="pay_offline" type="hidden" value="1">
-                    </div>
                     <div class="offline_payment">
                         <h5>@lang("Public_ViewEvent.offline_payment_instructions")</h5>
                         <div class="well">
