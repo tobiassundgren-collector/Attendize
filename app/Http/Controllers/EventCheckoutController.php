@@ -331,7 +331,7 @@ class EventCheckoutController extends Controller
              * Check if the user has chosen to pay offline
              * and if they are allowed
              */
-            if ($request->get('pay_offline')=="1" && $event->enable_offline_payments) {
+            if ($request->get('pay_offline') && $event->enable_offline_payments) {
                 return $this->completeOrder($event_id);
             }
 

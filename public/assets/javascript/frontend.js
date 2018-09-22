@@ -4746,9 +4746,11 @@ function log() {
         if(target=="#card")
         {
             $('#pay_offline').val(0);
+            $('#pay_offline').prop("disabled",true);
             $('.online_payment input,  .online_payment select').attr('disabled', false);
         }else{
             $('#pay_offline').val(1);
+            $('#pay_offline').prop("disabled",false);
             $('.online_payment input,  .online_payment select').attr('disabled', true);
         }
       });
