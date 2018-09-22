@@ -188,7 +188,7 @@
                             <label for="pay_offline_off">@lang("Public_ViewEvent.pay_using_offline_methods")</label>
                         </div>
                     </div>
-                    <div class="offline_payment" style="display: none;">
+                    <div class="offline_payment">
                         <h5>@lang("Public_ViewEvent.offline_payment_instructions")</h5>
                         <div class="well">
                             {!! Markdown::parse($event->offline_payment_instructions) !!}
