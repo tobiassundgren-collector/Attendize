@@ -122,45 +122,24 @@
                     }
                 </style>
 
-<ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" href="#card">Betala med Kort</a></li>
-  <li><a data-toggle="tab" href="#swish">Betala med Swish</a></li>
-</ul>
 
-<div class="tab-content">
-  <div id="home" class="tab-pane fade in active">
-    <h3>Betala med kort</h3>
-    <p>Some content.</p>
-  </div>
-  <div id="menu1" class="tab-pane fade">
-    <h3>Menu 1</h3>
-    <p>Some content in menu 1.</p>
-  </div>
-</div>
 
                 @if($order_requires_payment)
 
 
                 <h3>@lang("Public_ViewEvent.payment_information")</h3>
                     @lang("Public_ViewEvent.below_payment_information_header")
-                @if($event->enable_offline_payments)
-                    <div class="offline_payment_toggle">
-                        <div class="custom-checkbox">
-                            <input data-toggle="toggle" id="pay_offline" name="pay_offline" type="checkbox" value="1">
-                            <label for="pay_offline">@lang("Public_ViewEvent.pay_using_offline_methods")</label>
-                        </div>
-                    </div>
-                    <div class="offline_payment" style="display: none;">
-                        <h5>@lang("Public_ViewEvent.offline_payment_instructions")</h5>
-                        <div class="well">
-                            {!! Markdown::parse($event->offline_payment_instructions) !!}
-                        </div>
-                    </div>
 
-                @endif
+               <ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#card">Betala med Kort</a></li>
+  @if($event->enable_offline_payments)
+  <li><a data-toggle="tab" href="#swish">Betala med Swish</a></li>
+  @endif
+</ul>
 
-
-                @if(@$payment_gateway->is_on_site)
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+  @if(@$payment_gateway->is_on_site)
                     <div class="online_payment">
                         <div class="row">
                             <div class="col-md-12">
@@ -200,6 +179,31 @@
                     </div>
 
                 @endif
+  </div>
+  <div id="menu1" class="tab-pane fade">
+  @if($event->enable_offline_payments)
+  <div class="offline_payment_toggle">
+                        <div class="custom-checkbox">
+                            <input data-toggle="toggle" id="pay_offline" name="pay_offline" type="checkbox" value="1">
+                            <label for="pay_offline">@lang("Public_ViewEvent.pay_using_offline_methods")</label>
+                        </div>
+                    </div>
+                    <div class="offline_payment" style="display: none;">
+                        <h5>@lang("Public_ViewEvent.offline_payment_instructions")</h5>
+                        <div class="well">
+                            {!! Markdown::parse($event->offline_payment_instructions) !!}
+                        </div>
+                    </div>
+
+                @endif
+  </div>
+</div>
+
+              
+                  
+
+
+              
 
                 @endif
 
