@@ -130,7 +130,7 @@
                 <h3>@lang("Public_ViewEvent.payment_information")</h3>
                     @lang("Public_ViewEvent.below_payment_information_header")
 
-               <ul class="nav nav-tabs">
+               <ul class="nav nav-tabs navbar-light" style="background-color: #e3f2fd;">
   <li class="active"><a data-toggle="tab" href="#card">Betala med Kort</a></li>
   @if($event->enable_offline_payments)
   <li><a data-toggle="tab" href="#swish">Betala med Swish</a></li>
@@ -183,10 +183,8 @@
   <div id="swish" class="tab-pane fade">
   @if($event->enable_offline_payments)
   <div class="offline_payment_toggle">
-                        <div class="custom-checkbox">
-                            <input  id="pay_offline_off" name="pay_offline" type="hidden" value="1">
-                            <label for="pay_offline_off">@lang("Public_ViewEvent.pay_using_offline_methods")</label>
-                        </div>
+                        
+                            <input id="pay_offline_off" name="pay_offline" type="hidden" value="1">
                     </div>
                     <div class="offline_payment">
                         <h5>@lang("Public_ViewEvent.offline_payment_instructions")</h5>

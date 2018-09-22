@@ -4741,6 +4741,10 @@ function log() {
     $('.card-number').payment('formatCardNumber');
     $('.card-cvc').payment('formatCardCVC');
 
+    $('.navbar-collapse a').click(function(){ 
+        var selTab = $('.nav-tabs .active > a').attr('href');
+        alert(selTab);
+    }
     $('#pay_offline').change(function () {
         $('.online_payment').toggle(!this.checked);
         $('.offline_payment').toggle(this.checked);
