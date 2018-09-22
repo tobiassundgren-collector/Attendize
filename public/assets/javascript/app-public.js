@@ -173,10 +173,10 @@ $(function() {
     $('.card-number').payment('formatCardNumber');
     $('.card-cvc').payment('formatCardCVC');
 
-    $('.nav-tabs a').click(function(){ 
-        var selTab = $('.nav-tabs .active > a').attr('href');
-        alert(selTab);
-    });
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var target = $(e.target).attr("href") // activated tab
+        alert(target);
+      });
 
     $('#pay_offline').change(function () {
         $('.online_payment').toggle(!this.checked);
