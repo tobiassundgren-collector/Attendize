@@ -122,7 +122,24 @@
                     }
                 </style>
 
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#card">Betala med Kort</a></li>
+  <li><a data-toggle="tab" href="#swish">Betala med Swish</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <h3>Betala med kort</h3>
+    <p>Some content.</p>
+  </div>
+  <div id="menu1" class="tab-pane fade">
+    <h3>Menu 1</h3>
+    <p>Some content in menu 1.</p>
+  </div>
+</div>
+
                 @if($order_requires_payment)
+
 
                 <h3>@lang("Public_ViewEvent.payment_information")</h3>
                     @lang("Public_ViewEvent.below_payment_information_header")
