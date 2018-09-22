@@ -141,11 +141,10 @@
 <div class="tab-content">
   <div id="card" class="tab-pane fade in active">
   @if(@$payment_gateway->is_on_site)
-<div>
-  Våra kortbetalningar hanteras av vår betalningspartner <a href="www.stripe.com/se" target="_new">Stripe</a> som för att garantera snabba och säkra betalningar.<br/> 
-  Stripe accepterar alla stora kort såsom VISA och MasterCard<br/> 
-  Vi lagrar aldrig ert kreditkortsnummer, istället förmedlas din betalning av Stripe med säker kryptering. <br/>
-  Stripe är certifierat enligt PCI-leverantör Level 1. Detta är den högsta nivån av certifiering som finns i betalningsbranschen. <br/>
+<div>Betala med kort via Stripe.com
+<button type="button" class="btn  btn-link" data-toggle="modal" data-target="#cardModalCenter">
+            Mer info.
+                </button>
                 </div>
                     <div class="online_payment">
                         <div class="row">
@@ -221,3 +220,26 @@
 @if(session()->get('message'))
     <script>showMessage('{{session()->get('message')}}');</script>
 @endif
+
+ <div class="modal fade" id="cardModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Kontakta oss</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Våra kortbetalningar hanteras av vår betalningspartner <a href="www.stripe.com/se" target="_new">Stripe</a> som för att garantera snabba och säkra betalningar.<br/> 
+  Stripe accepterar alla stora kort såsom VISA och MasterCard<br/> 
+  Vi lagrar aldrig ert kreditkortsnummer, istället förmedlas din betalning av Stripe med säker kryptering. <br/>
+  Stripe är certifierat enligt PCI-leverantör Level 1. Detta är den högsta nivån av certifiering som finns i betalningsbranschen. <br/>
+        <br/> <br/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+      </div>
+    </div>
+  </div>
+</div>
