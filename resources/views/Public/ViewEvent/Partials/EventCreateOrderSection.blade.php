@@ -132,15 +132,16 @@
                     <input type="hidden" id="pay_offline" name="pay_offline" disabled="true" value="0">
 
                <ul class="nav nav-tabs navbar-light" style="background-color: #e3f2fd;">
-  <li class="active"><a data-toggle="tab" href="#card">Betala med Kort</a></li>
+  <li class="active"><a data-toggle="tab" role="button" data-target="#card">Betala med Kort</a></li>
   @if($event->enable_offline_payments)
-  <li><a data-toggle="tab" href="#swish">Betala med Swish</a></li>
+  <li><a data-toggle="tab" role="button" data-target="#swish">Betala med Swish</a></li>
   @endif
 </ul>
 
 <div class="tab-content">
   <div id="card" class="tab-pane fade in active">
   @if(@$payment_gateway->is_on_site)
+  Betala med kort... Mer info finns här
                     <div class="online_payment">
                         <div class="row">
                             <div class="col-md-12">

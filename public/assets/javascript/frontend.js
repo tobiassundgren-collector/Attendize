@@ -4742,7 +4742,7 @@ function log() {
     $('.card-cvc').payment('formatCardCVC');
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        var target = $(e.target).attr("href") // activated tab
+        var target = $(e.target).data("target"); // activated tab
         if(target=="#card")
         {
             $('#pay_offline').val(0);
