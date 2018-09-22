@@ -131,10 +131,10 @@
                     @lang("Public_ViewEvent.below_payment_information_header")
                     <input type="hidden" id="pay_offline" name="pay_offline" disabled="true" value="0">
 
-               <ul class="nav nav-tabs navbar-light" style="background-color: #e3f2fd;">
-  <li class="active"><a data-toggle="tab" role="button" data-target="#card">Betala med Kort</a></li>
+               <ul class="nav nav-tabs navbar-light">
+  <li class="active"><a data-toggle="tab" style="cursor:pointer;" data-target="#card">Betala med Kort</a></li>
   @if($event->enable_offline_payments)
-  <li><a data-toggle="tab" role="button" data-target="#swish">Betala med Swish</a></li>
+  <li><a data-toggle="tab" style="cursor:pointer;" data-target="#swish">Betala med Swish</a></li>
   @endif
 </ul>
 
