@@ -142,8 +142,8 @@
   <div id="card" class="tab-pane fade in active">
   @if(@$payment_gateway->is_on_site)
 <div>Betala med kort via Stripe.com
-<button type="button" class="btn  btn-link" data-toggle="modal" data-target="#cardModalCenter">
-            Mer info.
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#cardModalCenter">
+            Info om våra kortbetalningar
                 </button>
                 </div>
                     <div class="online_payment">
@@ -190,7 +190,7 @@
   @if($event->enable_offline_payments)
   <div>
   Betala gärna med Swish. Snabbt, enkelt och säkert. <br/>
-  Följ instruktionerna nedan eller scanna QR koden som du hittar på nästa sida.<br/>
+  Följ instruktionerna nedan eller scanna QR koden som du hittar på nästa sida.<br/><br/>
                                     </div>
                     <div class="offline_payment">
                         <h5>@lang("Public_ViewEvent.offline_payment_instructions")</h5>
@@ -225,7 +225,7 @@
   <div class="modal-dialog modal-dialog-centered " role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Kontakta oss</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Info om våra kortbetalningar</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
