@@ -141,8 +141,10 @@
 <div class="tab-content">
   <div id="card" class="tab-pane fade in active">
   @if(@$payment_gateway->is_on_site)
-<div>Betala med kort via Stripe.com
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#cardModalCenter">
+<div>
+{!!HTML::image('assets/images/swish.jpg')!!}
+Betala med kort via Stripe.com
+<button type="button" class="btn btn-light" style="float:right" data-toggle="modal" data-target="#cardModalCenter">
             Info om våra kortbetalningar
                 </button>
                 </div>
@@ -189,6 +191,7 @@
   <div id="swish" class="tab-pane fade">
   @if($event->enable_offline_payments)
   <div>
+  {!!HTML::image('assets/images/swish.jpg')!!}
   Betala gärna med Swish. Snabbt, enkelt och säkert. <br/>
   Följ instruktionerna nedan eller scanna QR koden som du hittar på nästa sida.<br/><br/>
                                     </div>
