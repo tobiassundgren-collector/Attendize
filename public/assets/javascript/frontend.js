@@ -4638,7 +4638,7 @@ function log() {
 
         toggleSubmitDisabled($submitButton);
 
-        if ($form.hasClass('payment-form') && $('#pay_offline').value==1) {
+        if ($form.hasClass('payment-form') && $('#pay_offline').val()==1) {
             clearFormErrors($('.payment-form'));
 
             Stripe.setPublishableKey($form.data('stripe-pub-key'));
@@ -4745,10 +4745,10 @@ function log() {
         var target = $(e.target).attr("href") // activated tab
         if(target=="#card")
         {
-            $('#pay_offline').value=0;
+            $('#pay_offline').val(0);
             $('.online_payment input,  .online_payment select').attr('disabled', false);
         }else{
-            $('#pay_offline').value=1;
+            $('#pay_offline').val(1);
             $('.online_payment input,  .online_payment select').attr('disabled', true);
         }
       });
