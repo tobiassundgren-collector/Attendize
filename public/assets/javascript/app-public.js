@@ -70,7 +70,7 @@ $(function() {
 
         toggleSubmitDisabled($submitButton);
 
-        if ($form.hasClass('payment-form') && $('#pay_offline').val()==1) {
+        if ($form.hasClass('payment-form') && $('#pay_offline').val()==0) {
             clearFormErrors($('.payment-form'));
 
             Stripe.setPublishableKey($form.data('stripe-pub-key'));
