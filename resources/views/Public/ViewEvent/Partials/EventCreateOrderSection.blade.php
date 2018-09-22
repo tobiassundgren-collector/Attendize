@@ -142,6 +142,10 @@
   <div id="card" class="tab-pane fade in active">
   @if(@$payment_gateway->is_on_site)
 <div>
+  Våra kortbetalningar hanteras av vår betalningspartner <a href="www.stripe.com/se" target="_new">Stripe</a> som för att garantera snabba och säkra betalningar.<br/> 
+  Stripe accepterar alla stora kort såsom VISA och MasterCard<br/> 
+  Vi lagrar aldrig ert kreditkortsnummer, istället förmedlas din betalning av Stripe med säker kryptering. <br/>
+  Stripe är certifierat enligt PCI-leverantör Level 1. Detta är den högsta nivån av certifiering som finns i betalningsbranschen. <br/>
                 </div>
                     <div class="online_payment">
                         <div class="row">
