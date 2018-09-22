@@ -525,7 +525,6 @@ class EventCheckoutController extends Controller
             $order = new Order();
             $ticket_order = session()->get('ticket_order_' . $event_id);
             $request_data = $ticket_order['request_data'][0];
-            var_dump($request_data);
             $event = Event::findOrFail($ticket_order['event_id']);
             $attendee_increment = 1;
             $ticket_questions = isset($request_data['ticket_holder_questions']) ? $request_data['ticket_holder_questions'] : [];
