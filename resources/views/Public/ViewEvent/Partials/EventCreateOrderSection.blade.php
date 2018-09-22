@@ -138,7 +138,7 @@
 </ul>
 
 <div class="tab-content">
-  <div id="home" class="tab-pane fade in active">
+  <div id="card" class="tab-pane fade in active">
   @if(@$payment_gateway->is_on_site)
                     <div class="online_payment">
                         <div class="row">
@@ -180,7 +180,7 @@
 
                 @endif
   </div>
-  <div id="menu1" class="tab-pane fade">
+  <div id="swish" class="tab-pane fade">
   @if($event->enable_offline_payments)
   <div class="offline_payment_toggle">
                         <div class="custom-checkbox">
