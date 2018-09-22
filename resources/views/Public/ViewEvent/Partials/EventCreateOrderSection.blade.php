@@ -184,8 +184,8 @@
   @if($event->enable_offline_payments)
   <div class="offline_payment_toggle">
                         <div class="custom-checkbox">
-                            <input data-toggle="toggle" id="pay_offline" name="pay_offline" type="checkbox" value="1">
-                            <label for="pay_offline">@lang("Public_ViewEvent.pay_using_offline_methods")</label>
+                            <input  id="pay_offline_off" name="pay_offline" type="hidden" value="1">
+                            <label for="pay_offline_off">@lang("Public_ViewEvent.pay_using_offline_methods")</label>
                         </div>
                     </div>
                     <div class="offline_payment" style="display: none;">
