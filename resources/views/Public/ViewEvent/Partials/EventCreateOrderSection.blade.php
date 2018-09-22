@@ -129,7 +129,7 @@
 
                 <h3>@lang("Public_ViewEvent.payment_information")</h3>
                     @lang("Public_ViewEvent.below_payment_information_header")
-                    <input type="hidden" id="pay_offline" value="0">
+                    <input type="hidden" id="pay_offline" name="pay_offline" value="0">
 
                <ul class="nav nav-tabs navbar-light" style="background-color: #e3f2fd;">
   <li class="active"><a data-toggle="tab" href="#card">Betala med Kort</a></li>
