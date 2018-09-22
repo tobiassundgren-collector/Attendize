@@ -4743,7 +4743,12 @@ function log() {
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var target = $(e.target).attr("href") // activated tab
-        alert(target);
+        if(target=="#card")
+        {
+            $('.online_payment input,  .online_payment select').attr('disabled', false);
+        }else{
+            $('.online_payment input,  .online_payment select').attr('disabled', true);
+        }
       });
 
     $('#pay_offline').change(function () {
