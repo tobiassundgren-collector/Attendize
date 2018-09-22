@@ -4638,7 +4638,7 @@ function log() {
 
         toggleSubmitDisabled($submitButton);
 
-        if ($form.hasClass('payment-form') && !$('#pay_offline').is(":checked")) {
+        if ($form.hasClass('payment-form') && $('#pay_offline').value==1) {
             clearFormErrors($('.payment-form'));
 
             Stripe.setPublishableKey($form.data('stripe-pub-key'));
@@ -4745,22 +4745,13 @@ function log() {
         var target = $(e.target).attr("href") // activated tab
         if(target=="#card")
         {
+            $('#pay_offline').value=0;
             $('.online_payment input,  .online_payment select').attr('disabled', false);
         }else{
+            $('#pay_offline').value=1;
             $('.online_payment input,  .online_payment select').attr('disabled', true);
         }
       });
-
-    $('#pay_offline').change(function () {
-        $('.online_payment').toggle(!this.checked);
-        $('.offline_payment').toggle(this.checked);
-
-        // Disable CC form inputs to prevent Chrome trying to validate hidden fields
-        $('.online_payment input,  .online_payment select').attr('disabled', this.checked);
-
-    }).change();
-
-
 });
 
 function processFormErrors($form, errors)
