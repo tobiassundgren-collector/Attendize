@@ -141,7 +141,10 @@
 <div class="tab-content">
   <div id="card" class="tab-pane fade in active">
   @if(@$payment_gateway->is_on_site)
-  Betala med kort... Mer info finns här
+  Våra kortbetalningar hanteras av vår betalningspartner <a href="www.stripe.com/se" target="_new">Stripe</a> som för att garantera snabba och säkra betalningar.<br/> 
+  Stripe accepterar alla stora kort såsom VISA och MasterCard<br/> 
+  Vi lagrar aldrig ert kreditkortsnummer, istället förmedlas din betalning av Stripe med säker kryptering. <br/>
+  Stripe är certifierat enligt PCI-leverantör Level 1. Detta är den högsta nivån av certifiering som finns i betalningsbranschen. <br/>
                     <div class="online_payment">
                         <div class="row">
                             <div class="col-md-12">
@@ -184,6 +187,8 @@
   </div>
   <div id="swish" class="tab-pane fade">
   @if($event->enable_offline_payments)
+  Betala gärna med Swish. Snabbt, enkelt och säkert. <br/>
+  Följ instruktionerna nedan eller scanna QR koden som du hittar på nästa sida.<br/>
                     <div class="offline_payment">
                         <h5>@lang("Public_ViewEvent.offline_payment_instructions")</h5>
                         <div class="well">
