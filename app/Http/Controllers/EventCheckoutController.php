@@ -184,7 +184,7 @@ class EventCheckoutController extends Controller
         if (empty($tickets)) {
             return response()->json([
                 'status'  => 'error',
-                'message' => 'No tickets selected.',
+                'message' => 'Inga biljetter valda.',
             ]);
         }
 
