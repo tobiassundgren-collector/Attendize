@@ -235,7 +235,7 @@ Betala med kort via Stripe.com
         </button>
       </div>
       <div class="modal-body">
-        Våra kortbetalningar hanteras av vår betalningspartner <a href="www.stripe.com/se" target="_new">Stripe</a> som för att garantera snabba och säkra betalningar.<br/> 
+        Våra kortbetalningar hanteras av vår betalningspartner <a href="www.stripe.com/se" target="_new">Stripe</a> för att garantera snabba och säkra betalningar.<br/> 
   Stripe accepterar alla stora kort såsom VISA och MasterCard<br/> 
   Vi lagrar aldrig ert kreditkortsnummer, istället förmedlas din betalning av Stripe med säker kryptering. <br/>
   Stripe är certifierat enligt PCI-leverantör Level 1. Detta är den högsta nivån av certifiering som finns i betalningsbranschen. <br/>
