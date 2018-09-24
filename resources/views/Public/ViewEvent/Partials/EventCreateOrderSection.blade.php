@@ -195,14 +195,14 @@ Betala med kort via Stripe.com
   {!!HTML::image('assets/images/swish.jpeg')!!}<br/>
   Betala gärna med Swish. Snabbt, enkelt och säkert. <br/>
   Följ instruktionerna nedan eller scanna QR koden som du hittar på nästa sida.<br/><br/>
-                                    </div>
+  
                     <div class="offline_payment">
                         <h5>@lang("Public_ViewEvent.offline_payment_instructions")</h5>
                         <div class="well">
                             {!! Markdown::parse($event->offline_payment_instructions) !!}
                         </div>
                     </div>
-
+                    </div>
 @endif
   </div>
 </div>
