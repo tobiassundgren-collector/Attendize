@@ -148,7 +148,7 @@
 Betala med kort via Stripe.com
     </div>
     <div class="col-sm-12 col-md-6">
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cardModalCenter">
+    <button type="button" class="btn btn-link" style="color: #000; padding:10px;" data-toggle="modal" data-target="#cardModalCenter">
             Info om våra kortbetalningar
      </button>
     </div>
