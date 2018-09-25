@@ -4568,7 +4568,6 @@ function log() {
 }).call(this);
 ;$(function() {
     $('form.ajax').on('submit', function(e) {
-      alert('Submit work');
         e.preventDefault();
         e.stopImmediatePropagation();
 
@@ -4639,7 +4638,6 @@ function log() {
 
         toggleSubmitDisabled($submitButton);
 
-        alert('Submit work 2');
         if ($form.hasClass('payment-form') && $('#pay_offline').val()==0) {
             clearFormErrors($('.payment-form'));
 
@@ -4700,7 +4698,6 @@ function log() {
             }
 
         } else {
-          alert('Submit work 3');
             $form.ajaxSubmit(ajaxFormConf);
         }
     });
