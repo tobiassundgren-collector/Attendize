@@ -88,18 +88,9 @@
                     </div>
                 </div>
 
-                <!-- <div class="p20 pl0">
-                    <a href="javascript:void(0);" class="btn btn-primary btn-xs" id="mirror_buyer_info">
-                        @lang("Public_ViewEvent.copy_buyer")
-                    </a>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                         <div class="ticket_holders_details" >
-                            <h3>@lang("Public_ViewEvent.ticket_holder_information")</h3>
                             <?php
-                                $total_attendee_increment = 0;
-                            ?> -->
+                        $total_attendee_increment = 0;
+                            ?> 
                             @foreach($tickets as $ticket)
                                 @for($i=0; $i<=$ticket['qty']-1; $i++)
                                
@@ -111,100 +102,85 @@
                                             
                                 @endfor
                             @endforeach
-<!--
-                        </div> 
-                    </div>
-                </div> -->
 
-                <style>
-                    .offline_payment_toggle {
-                        padding: 20px 0;
-                    }
-                </style>
-
-
-
-@if($order_requires_payment)
-
-
+            @if($order_requires_payment)
                 <h3>@lang("Public_ViewEvent.payment_information")</h3>
-                    @lang("Public_ViewEvent.below_payment_information_header")
-                    <input type="hidden" id="pay_offline" name="pay_offline" disabled="true" value="0">
+                @lang("Public_ViewEvent.below_payment_information_header")
+                <input type="hidden" id="pay_offline" name="pay_offline" disabled="true" value="0">
 
-               <ul class="nav nav-tabs navbar-light">
-  <li class="active"><a data-toggle="tab" style="cursor:pointer;" data-target="#card">Betala med Kort</a></li>
-  @if($event->enable_offline_payments)
-  <li><a data-toggle="tab" style="cursor:pointer;" data-target="#swish">Betala med Swish</a></li>
-  @endif
-</ul>
+                <ul class="nav nav-tabs navbar-light">
+                    <li class="active"><a data-toggle="tab" style="cursor:pointer;" data-target="#card">Betala med Kort</a></li>
+                    @if($event->enable_offline_payments)
+                    <li><a data-toggle="tab" style="cursor:pointer;" data-target="#swish">Betala med Swish</a></li>
+                    @endif
+                </ul>
 
-<div class="tab-content">
-  <div id="card" class="tab-pane fade in active">
-  @if(@$payment_gateway->is_on_site)
-<div  class="container">
-<div class="row">
-    <div class="col-sm-12 col-md-6">
-    {!!HTML::image('assets/images/stripe.png')!!}<br />
-Betala med kort via Stripe.com
-    </div>
-    <div class="col-sm-12 col-md-6">
-    <button type="button" class="btn btn-link" style="color: #000; padding:10px;" data-toggle="modal" data-target="#cardModalCenter">
-            Info om våra kortbetalningar
-     </button>
-    </div>
-</div>
- </div>
-                    <div class="online_payment">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    {!! Form::label('card-number', trans("Public_ViewEvent.card_number")) !!}
-                                    <input required="required" type="text" autocomplete="off" placeholder="**** **** **** ****" class="form-control card-number" size="20" data-stripe="number">
+                <div class="tab-content">
+                    <div id="card" class="tab-pane fade in active">
+                        @if(@$payment_gateway->is_on_site)
+                        <div  class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                {!!HTML::image('assets/images/stripe.png')!!}<br />
+                                    Betala med kort via Stripe.com
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                <button type="button" class="btn btn-link" style="color: #000; padding:10px;" data-toggle="modal" data-target="#cardModalCenter">
+                                        Info om våra kortbetalningar
+                                </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    {!! Form::label('card-expiry-month', trans("Public_ViewEvent.expiry_month")) !!}
-                                    {!!  Form::selectRange('card-expiry-month',1,12,null, [
-                                            'class' => 'form-control card-expiry-month',
-                                            'data-stripe' => 'exp_month'
-                                        ] )  !!}
+                        <div class="online_payment">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        {!! Form::label('card-number', trans("Public_ViewEvent.card_number")) !!}
+                                        <input required="required" type="text" autocomplete="off" placeholder="**** **** **** ****" class="form-control card-number" size="20" data-stripe="number">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    {!! Form::label('card-expiry-year', trans("Public_ViewEvent.expiry_year")) !!}
-                                    {!!  Form::selectRange('card-expiry-year',date('Y'),date('Y')+10,null, [
-                                            'class' => 'form-control card-expiry-year',
-                                            'data-stripe' => 'exp_year'
-                                        ] )  !!}</div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        {!! Form::label('card-expiry-month', trans("Public_ViewEvent.expiry_month")) !!}
+                                        {!!  Form::selectRange('card-expiry-month',1,12,null, [
+                                                'class' => 'form-control card-expiry-month',
+                                                'data-stripe' => 'exp_month'
+                                            ] )  !!}
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        {!! Form::label('card-expiry-year', trans("Public_ViewEvent.expiry_year")) !!}
+                                        {!!  Form::selectRange('card-expiry-year',date('Y'),date('Y')+10,null, [
+                                                'class' => 'form-control card-expiry-year',
+                                                'data-stripe' => 'exp_year'
+                                            ] )  !!}</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    {!! Form::label('card-expiry-year', trans("Public_ViewEvent.cvc_number")) !!}
-                                    <input required="required" placeholder="***" class="form-control card-cvc" data-stripe="cvc">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        {!! Form::label('card-expiry-year', trans("Public_ViewEvent.cvc_number")) !!}
+                                        <input required="required" placeholder="***" class="form-control card-cvc" data-stripe="cvc">
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        @endif
                     </div>
-
-                @endif
-  </div>
-  <div id="swish" class="tab-pane fade">
-  @if($event->enable_offline_payments)
-  <div>
-  {!!HTML::image('assets/images/swish.jpeg')!!}<br/>
-  Betala gärna med Swish. Snabbt, enkelt och säkert. <br/>
-  Följ instruktionerna på som du får i ditt bekräftelse-email och på nästa sida.
-</div>
-@endif
-  </div>
-</div>
-                @endif
+                    <div id="swish" class="tab-pane fade">
+                    @if($event->enable_offline_payments)
+                        <div>
+                            {!!HTML::image('assets/images/swish.jpeg')!!}<br/>
+                            Betala gärna med Swish. Snabbt, enkelt och säkert. <br/><br/>
+                            Klicka på "Slutför Köp" nedan och följ instruktionerna som du får i ditt bekräftelse-email eller på nästa sida.
+                        </div>
+                    @endif
+                    </div>
+                </div>
+            @endif
 
                 @if($event->pre_order_display_message)
                 <div class="well well-small">
@@ -213,7 +189,7 @@ Betala med kort via Stripe.com
                 @endif
 
                {!! Form::hidden('is_embedded', $is_embedded) !!}
-               {!! Form::submit(trans("Public_ViewEvent.checkout_submit"), ['class' => 'btn btn-lg btn-success card-submit', 'style' => 'width:100%;']) !!}
+               {!! Form::submit(trans("Public_ViewEvent.checkout_submit"), ['class' => 'btn btn-lg btn-success card-submit', 'style' => 'width:100%; margin:10px;']) !!}
 
             </div>
         </div>
