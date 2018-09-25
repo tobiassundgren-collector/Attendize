@@ -143,14 +143,14 @@
   @if(@$payment_gateway->is_on_site)
 <div  class="container">
 <div class="row">
-    <div class="col-sm">
+    <div class="col-sm-12 col-md-6">
     {!!HTML::image('assets/images/stripe.png')!!}<br />
 Betala med kort via Stripe.com
     </div>
-    <div class="col-sm">
+    <div class="col-sm-12 col-md-6">
     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cardModalCenter">
             Info om våra kortbetalningar
-                </button>
+     </button>
     </div>
 </div>
  </div>
