@@ -94,11 +94,11 @@
                             @foreach($tickets as $ticket)
                                 @for($i=0; $i<=$ticket['qty']-1; $i++)
                                
-                                 {!! Form::hidden("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_first_name.$i.{$ticket['ticket']['id']} ticket_holder_first_name form-control"]) !!}
+                                 {!! Form::hidden("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", null, [ 'class' => "ticket_holder_first_name.$i.{$ticket['ticket']['id']} ticket_holder_first_name form-control"]) !!}
                         
-                                 {!! Form::hidden("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_last_name.$i.{$ticket['ticket']['id']} ticket_holder_last_name form-control"]) !!}
+                                 {!! Form::hidden("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", null, ['class' => "ticket_holder_last_name.$i.{$ticket['ticket']['id']} ticket_holder_last_name form-control"]) !!}
                         
-                                 {!! Form::hidden("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_email.$i.{$ticket['ticket']['id']} ticket_holder_email form-control"]) !!}
+                                 {!! Form::hidden("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", null, [ 'class' => "ticket_holder_email.$i.{$ticket['ticket']['id']} ticket_holder_email form-control"]) !!}
                                             
                                 @endfor
                             @endforeach
