@@ -141,14 +141,19 @@
 <div class="tab-content">
   <div id="card" class="tab-pane fade in active">
   @if(@$payment_gateway->is_on_site)
-<div>
-<button type="button" class="btn btn-info" style="float:right" data-toggle="modal" data-target="#cardModalCenter">
+<div  class="container">
+<div class="row">
+    <div class="col-sm">
+    {!!HTML::image('assets/images/stripe.png')!!}<br />
+Betala med kort via Stripe.com
+    </div>
+    <div class="col-sm">
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cardModalCenter">
             Info om våra kortbetalningar
                 </button>
-{!!HTML::image('assets/images/stripe.png')!!}<br />
-Betala med kort via Stripe.com
-
-                </div>
+    </div>
+</div>
+ </div>
                     <div class="online_payment">
                         <div class="row">
                             <div class="col-md-12">
