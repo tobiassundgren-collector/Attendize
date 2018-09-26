@@ -122,7 +122,7 @@
                     <br/>
                     <br/>
                     Eller <br/> <br/>
-                    Swisha {{number_format($order->total_amount, 2)} kr till 0760959055 (Tobias Sundgren). <br/>
+                    Swisha {{number_format($order->total_amount, 2)}} kr till 0760959055 (Tobias Sundgren). <br/>
                     Ange {{$order->order_reference}} som meddelande.
 
 
