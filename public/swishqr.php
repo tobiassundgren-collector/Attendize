@@ -32,5 +32,5 @@
             $filename = "qr_1ABC123123.png";
             $file_path = 
             "/var/www/tickets.molnlyckestorband.com/Attendize/public/user_content/qr/" . $file_name;
-            file_put_contents($file_path, $decoded);
+            file_put_contents($file_path, $curl_response);
             echo 'response ok!';
