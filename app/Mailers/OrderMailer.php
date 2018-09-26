@@ -31,9 +31,10 @@ class OrderMailer
         $orderService = new OrderService($order->amount, $order->organiser_booking_fee, $order->event);
         $orderService->calculateFinalCosts();
 
-        Log::info("Creating QR code " . $order->order_reference);
+        $amount = round($orderService->getOrderTotalWithBookingFee(false))
+        Log::info("Creating QR code " . $order->order_reference . "amount: " . $amount);
 
-        $this->GenerateQr($order->order_reference, round($orderService->getOrderTotalWithBookingFee(false)));
+        $this->GenerateQr($order->order_reference, $amount);
 
         Log::info("Sending ticket to: " . $order->email);
         $data = [
@@ -65,7 +66,7 @@ class OrderMailer
     public function GenerateQr($message, $amount)
     {
     
-      $service_url = 'https://mpc.getswish.net/qrg-swish/api/v1/prefilled';
+            $service_url = 'https://mpc.getswish.net/qrg-swish/api/v1/prefilled';
                 $curl = curl_init($service_url);
                 $jsonData = array(
                         "size"=> 300,
