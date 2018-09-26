@@ -7,8 +7,7 @@
                     "format"=>"png",
                     "payee" => array("value" => "0739022421", "editable" => "false"),
                     "amount" => array("value" => 100, "editable" => "false"),
-                    "message" => array("value" => "1ABC123123",  "editable" => "false"}
-                  }
+                    "message" => array("value" => "1ABC123123",  "editable" => "false")
             );
             $headers = array('Content-type: application/json');
             $jsonDataEncoded = json_encode($jsonData);
