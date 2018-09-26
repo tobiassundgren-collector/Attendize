@@ -115,8 +115,8 @@
                         @lang("Public_ViewEvent.order_awaiting_payment")
                     </div>
                     <div class="offline_payment_instructions well">
-                        @$qrLink = "/user_content/qr/qr_" . $order->order_reference .".png";
-                        {{$qrLink}}
+                        <?php $qrLink = "/user_content/qr/qr_" . $order->order_reference .".png"; ?>
+                        <img src="{{$qrLink}}" />
 
                         {!! Markdown::parse($event->offline_payment_instructions) !!}
                     </div>
