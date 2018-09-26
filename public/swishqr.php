@@ -23,12 +23,13 @@
                 die('error occured during curl exec. Additioanl info: ' . var_export($info));
             }
             curl_close($curl);
-            $filename = "qr_1ABC123123.png";
-            $file_path = 
-            "/var/www/tickets.molnlyckestorband.com/Attendize/public/user_content" . $file_name;
-            file_put_contents(file_path, curl_response);
+
             $decoded = json_decode($curl_response);
             if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
                 die('error occured: ' . $decoded->response->errormessage);
             }
+            $filename = "qr_1ABC123123.png";
+            $file_path = 
+            "/var/www/tickets.molnlyckestorband.com/Attendize/public/user_content/qr/" . $file_name;
+            file_put_contents($file_path, $decoded);
             echo 'response ok!';
