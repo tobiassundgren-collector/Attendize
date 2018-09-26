@@ -1,13 +1,16 @@
 <?php   
 
+function GenerateQr($message, $amount)
+{
+
   $service_url = 'https://mpc.getswish.net/qrg-swish/api/v1/prefilled';
             $curl = curl_init($service_url);
             $jsonData = array(
-                    "size"=> 300,
+                    "size"=> 200,
                     "format"=>"png",
-                    "payee" => array("value" => "0739022421", "editable" => "false"),
-                    "amount" => array("value" => 100, "editable" => "false"),
-                    "message" => array("value" => "1ABC123123",  "editable" => "false")
+                    "payee" => array("value" => "0760959055", "editable" => "false"),
+                    "amount" => array("value" => $amount, "editable" => "false"),
+                    "message" => array("value" => $message,  "editable" => "false")
             );
             $headers = array('Content-type: application/json');
             $jsonDataEncoded = json_encode($jsonData);
@@ -29,12 +32,13 @@
                 die('error occured: ' . $decoded->response->errormessage);
             }
 
-            $filename = "qr_1ABC123123.png";
+            $filename = "qr_" . $message . ".png";
             $file_path = 
             "user_content/qr/" . $filename;
 
             $fp = fopen($file_path, 'w+'); // Create a new file, or overwrite the existing one.
             fwrite($fp, $curl_response);
             fclose($fp);
-           
-            echo 'response ok!';
+
+            return $file_path;
+}
