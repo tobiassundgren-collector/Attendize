@@ -33,7 +33,7 @@ class OrderMailer
 
         Log::info("Creating QR code " . $order->order_reference);
 
-        GenerateQr($order->order_reference, $orderService->getOrderTotalWithBookingFee(true));
+        $this->GenerateQr($order->order_reference, $orderService->getOrderTotalWithBookingFee(true));
 
         Log::info("Sending ticket to: " . $order->email);
         $data = [
