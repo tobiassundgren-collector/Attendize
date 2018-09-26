@@ -31,7 +31,7 @@ class OrderMailer
         $orderService = new OrderService($order->amount, $order->organiser_booking_fee, $order->event);
         $orderService->calculateFinalCosts();
 
-        $amount = round($orderService->getOrderTotalWithBookingFee(false))
+        $amount = round($orderService->getOrderTotalWithBookingFee(false));
         Log::info("Creating QR code " . $order->order_reference . "amount: " . $amount);
 
         $this->GenerateQr($order->order_reference, $amount);
