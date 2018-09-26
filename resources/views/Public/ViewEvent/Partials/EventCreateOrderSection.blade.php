@@ -190,7 +190,7 @@
 
                {!! Form::hidden('is_embedded', $is_embedded) !!}
                {!! Form::submit(trans("Public_ViewEvent.checkout_submit"), ['class' => 'btn btn-lg btn-success card-submit', 'style' => 'width:100%; margin:10px;']) !!}
-
+            </form>
             </div>
         </div>
     </div>

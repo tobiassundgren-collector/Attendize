@@ -134,11 +134,6 @@ $(function() {
         }
     });
 
-    $('a').smoothScroll({
-        offset: -60
-    });
-
-
     /* Scroll to top */
     $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
