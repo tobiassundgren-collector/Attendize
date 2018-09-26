@@ -31,7 +31,7 @@
 
             $filename = "qr_1ABC123123.png";
             $file_path = 
-            "/var/www/tickets.molnlyckestorband.com/Attendize/public/user_content/qr/" . $file_name;
+            "user_content/qr/" . $file_name;
 
             $fp = fopen($file_path, 'w+'); // Create a new file, or overwrite the existing one.
             fwrite($fp, $curl_response);
