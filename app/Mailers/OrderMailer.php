@@ -68,7 +68,7 @@ class OrderMailer
       $service_url = 'https://mpc.getswish.net/qrg-swish/api/v1/prefilled';
                 $curl = curl_init($service_url);
                 $jsonData = array(
-                        "size"=> 200,
+                        "size"=> 300,
                         "format"=>"png",
                         "payee" => array("value" => "0760959055", "editable" => "false"),
                         "amount" => array("value" => $amount, "editable" => "false"),
