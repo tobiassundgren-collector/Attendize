@@ -115,8 +115,17 @@
                         @lang("Public_ViewEvent.order_awaiting_payment")
                     </div>
                     <div class="offline_payment_instructions well">
+                    Betala med Swish på ett sätten nedan: <br />
+                    Scanna QR koden nedan med Swish på din telefon:</br>
                         <?php $qrLink = "/user_content/qr/qr_" . $order->order_reference .".png"; ?>
                         <img src="{{$qrLink}}" />
+                    <br/>
+                    <br/>
+                    Eller <br/> <br/>
+                    Swisha {{number_format($order->total_amount, 2)} kr till 0760959055 (Tobias Sundgren). <br/>
+                    Ange {{$order->order_reference}} som meddelande.
+
+
 
                         {!! Markdown::parse($event->offline_payment_instructions) !!}
                     </div>
