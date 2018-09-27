@@ -122,7 +122,7 @@
                         <img src="{{$qrLink}}" class="img-fluid"/>
                     <br/>
                     <br/>
-                    <h3>Ange följande uppgifter<br/> <br/>
+                    <h3>Ange följande uppgifter manuellt<br/> <br/>
                     Swisha <b>{{number_format($order->total_amount, 2)}}</b> kr till <b>0760959055</b> (Tobias Sundgren). <br/>
                     Ange <b>{{$order->order_reference}}</b> som meddelande.
 
