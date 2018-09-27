@@ -116,13 +116,13 @@
                     </div>
                     <div class="offline_payment_instructions well">
                     Betala med Swish på ett sätten nedan: <br />
-                    <h3>Scanna QR koden nedan</h3><br/>
+                    <h4>Scanna QR koden nedan</h4><br/>
                     <a href="https://www.getswish.se/faq/hur-laser-jag-av-en-qr-kod-med-swish-appen/" target="_new">Hur läser jag av en QR-kod med Swish-appen?</a>
                         <?php $qrLink = "/user_content/qr/qr_" . $order->order_reference .".png"; ?>
-                        <img src="{{$qrLink}}" class="img-fluid"/>
+                        <img src="{{$qrLink}}" class="img-fluid img-responsive"/>
                     <br/>
                     <br/>
-                    <h3>Ange följande uppgifter manuellt<br/> <br/>
+                    <h4>Ange följande uppgifter manuellt</h4><br/> 
                     Swisha <b>{{number_format($order->total_amount, 2)}}</b> kr till <b>0760959055</b> (Tobias Sundgren). <br/>
                     Ange <b>{{$order->order_reference}}</b> som meddelande.
 
