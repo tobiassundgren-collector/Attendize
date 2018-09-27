@@ -117,7 +117,7 @@
                     <div class="offline_payment_instructions well">
                     Betala med Swish på ett sätten nedan: <br />
                     <h4>Scanna QR koden nedan</h4><br/>
-                    <a href="https://www.getswish.se/faq/hur-laser-jag-av-en-qr-kod-med-swish-appen/" target="_new">Hur läser jag av en QR-kod med Swish-appen?</a>
+                    <a href="https://www.getswish.se/faq/hur-laser-jag-av-en-qr-kod-med-swish-appen/" target="_blank">Hur läser jag av en QR-kod med Swish-appen?</a>
                         <?php $qrLink = "/user_content/qr/qr_" . $order->order_reference .".png"; ?>
                         <img src="{{$qrLink}}" class="img-fluid img-responsive"/>
                     <br/>
