@@ -732,7 +732,7 @@ Route::group(
     Route::get('/', function () {
         // return Redirect::route('showSelectOrganiser');
         // I prefer it that way:
-        return Redirect::route('showOrganiserHome', ["organiser_id"=>1]);
+        return Redirect::route('showEventPage', ["event_id"=>3]);
     });
 
     Route::get('/terms_and_conditions', [
