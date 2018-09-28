@@ -730,9 +730,9 @@ Route::group(
     });
 
     Route::get('/', function () {
-        return Redirect::route('showSelectOrganiser');
+        // return Redirect::route('showSelectOrganiser');
         // I prefer it that way:
-        // return Redirect::route('showOrganiserHome', ["organiser_id"=>1]);
+        return Redirect::route('showOrganiserHome', ["organiser_id"=>1]);
     });
 
     Route::get('/terms_and_conditions', [
