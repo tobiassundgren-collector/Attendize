@@ -15,7 +15,7 @@ class MyBaseController extends Controller
     {
 
         if (empty(Auth::user())) {
-            return redirect()->to('/e/3/det-svanger-om-taube');
+            return redirect()->to('/login');
         }
 
         /*
